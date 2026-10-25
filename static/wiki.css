@@ -1,0 +1,36 @@
+:root{--bg:#0d1117;--panel:#161b22;--surface:#21262d;--line:#30363d;--text:#f0f6fc;--muted:#a7b1bc;--faint:#768390;--accent:#b7d7c9;--shadow:0 18px 50px rgba(0,0,0,.35)}
+html[data-theme=light]{--bg:#f8f6f0;--panel:#fff;--surface:#eceae2;--line:#dedcd4;--text:#17211d;--muted:#59645e;--faint:#7a837d;--accent:#24483f;--shadow:0 18px 50px rgba(23,33,29,.14)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:14px/1.55 "SFMono-Regular","Roboto Mono",ui-monospace,Menlo,Consolas,monospace}
+a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}
+.topbar{height:72px;display:flex;align-items:center;gap:18px;padding:0 22px;background:var(--panel);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.brand{display:flex;align-items:center;gap:10px;white-space:nowrap;font-size:21px}.brand-muted{color:var(--muted);font-weight:400}
+.mark{width:36px;height:32px;display:grid;place-items:center;border-radius:6px;background:var(--text);color:var(--bg);font-size:19px;font-weight:900}
+.nav{display:flex;gap:14px;color:var(--muted);font-size:12px}.nav a:hover{color:var(--text)}
+.top-search,.hero-search{position:relative}.top-search{width:min(360px,32vw);margin-left:auto}
+.top-search input,.hero-search input{width:100%;background:var(--surface);border:1px solid var(--line);border-radius:6px;color:var(--text);outline:0}
+.top-search input{height:42px;padding:9px 12px 9px 38px}.hero-search{max-width:680px}.hero-search input{height:48px;padding:12px 16px 12px 46px}
+.top-search input:focus,.hero-search input:focus{border-color:var(--accent)}
+.search-icon{position:absolute;left:14px;top:13px;width:14px;height:14px;border:2px solid var(--muted);border-radius:50%;z-index:1}.search-icon:after{content:"";position:absolute;width:6px;height:2px;background:var(--muted);right:-5px;bottom:-3px;transform:rotate(45deg)}
+.hero-search .search-icon{top:15px;left:17px}.results{position:absolute;top:calc(100% + 6px);left:0;right:0;background:var(--panel);border:1px solid var(--line);border-radius:6px;z-index:20;overflow:hidden;box-shadow:var(--shadow)}
+.result{display:block;padding:10px 13px;border-bottom:1px solid var(--line)}.result:hover{background:var(--surface)}.result small{display:block;color:var(--muted);margin-top:3px}
+.theme{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:6px;padding:9px 13px;cursor:pointer}.theme:hover{border-color:var(--accent);color:var(--accent)}.mobile-menu{display:block}
+.container{width:min(1120px,calc(100% - 40px));margin:0 auto}.hero{padding:82px 0 54px}
+.eyebrow{display:block;color:var(--muted);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.hero h1,.page-head h1,.article-page h1,.narrow-page h1{margin:12px 0;font-size:clamp(34px,5vw,56px);line-height:1.05;letter-spacing:-.05em}
+.hero p,.page-head p{color:var(--muted);font-size:15px;margin:0 0 25px}.section{padding:22px 0 48px}
+.section-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}.section h2{font-size:23px;margin:0}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.articles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:7px;padding:18px;transition:border-color .15s,background .15s}.card:hover{border-color:var(--accent);background:var(--surface)}
+.category-number{display:inline-grid;place-items:center;width:34px;height:28px;border:1px solid var(--line);border-radius:5px;color:var(--muted);font-size:12px;margin-bottom:20px}
+.card h3{font-size:16px;line-height:1.35;margin:0 0 7px}.card p{color:var(--muted);font-size:13px;margin:0}.article-card .eyebrow{margin-bottom:12px}
+.btn{display:inline-block;border:1px solid var(--accent);border-radius:4px;background:var(--accent);color:var(--bg);padding:10px 14px;font-weight:700;cursor:pointer}.btn.secondary{border-color:var(--line);background:transparent;color:var(--text)}
+.page-head{padding:58px 0 30px}.wiki-page .articles{padding-bottom:70px}.article-page,.narrow-page{max-width:900px;padding-top:54px;padding-bottom:70px}
+.crumbs{color:var(--muted);font-size:12px;margin-bottom:46px}.crumbs a:hover{color:var(--text)}
+.article-page h1{font-size:clamp(34px,5vw,58px)}.article-lead{color:var(--muted);font-size:16px;margin:0 0 20px}.article-meta{color:var(--faint);font-size:12px;border-bottom:1px solid var(--line);padding-bottom:22px}
+.article-body{font-size:16px;color:var(--text);padding-top:32px}.article-body p{white-space:pre-wrap;margin:0}.article-actions{margin-top:32px}
+.upload{max-width:700px;background:var(--panel);border:1px solid var(--line);border-radius:7px;padding:20px}.upload label{display:block;color:var(--muted);font-size:13px;margin-bottom:15px}.upload input{display:block;width:100%;margin-top:7px;padding:10px;background:var(--surface);border:1px solid var(--line);border-radius:4px;color:var(--text)}
+.notice,.empty{color:var(--muted);font-size:13px;margin-top:13px}.footer{border-top:1px solid var(--line);color:var(--muted);font-size:12px;padding:20px 0}
+@media(max-width:1000px){.nav{display:none}.grid{grid-template-columns:repeat(2,1fr)}.articles{grid-template-columns:repeat(2,1fr)}.top-search{width:min(380px,42vw)}}
+@media(max-width:1000px){.mobile-menu{display:block;order:0}.brand{order:1}.topbar>.theme{order:2;margin-left:auto}.nav.open{display:flex;position:absolute;top:64px;left:16px;right:16px;flex-direction:column;gap:0;padding:8px;background:var(--panel);border:1px solid var(--line);border-radius:6px;box-shadow:var(--shadow);z-index:30}.nav.open a{padding:10px;border-bottom:1px solid var(--line)}}
+@media(max-width:700px){.topbar{height:auto;min-height:66px;flex-wrap:wrap;padding:12px 16px;gap:10px}.topbar>.theme{order:2;margin-left:auto}.top-search{order:3;width:100%;margin:2px 0 0}.container{width:min(100% - 32px,900px)}.hero{padding:54px 0 42px}.grid,.articles{grid-template-columns:1fr}.page-head{padding-top:38px}.article-page,.narrow-page{padding-top:30px}.crumbs{margin-bottom:30px}}
